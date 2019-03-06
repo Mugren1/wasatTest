@@ -12,7 +12,7 @@ PaymentSession.configure({
             securityCode: "100",
             expiryMonth: "05",
             expiryYear: "21"
-        }
+        } 
     },
     //SPECIFY YOUR MITIGATION OPTION HERE
     frameEmbeddingMitigation: ["javascript"],
