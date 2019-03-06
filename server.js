@@ -9,6 +9,8 @@ var gatewayController = require('./controllers/gateway');
 
 var masterpassController = require('./controllers/masterpass');
 
+require('dotenv/config');
+
 var SecureController = require('./controllers/3DSecure');
 var hostedCheckoutController = require('./controllers/hostedCheckout');
 var payThroughNVPController = require('./controllers/payThroughNVP');
