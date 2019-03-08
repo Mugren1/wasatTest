@@ -12,13 +12,18 @@ PaymentSession.configure({
             securityCode: "100",
             expiryMonth: "05",
             expiryYear: "21"
-        } 
+        }
     },
     //SPECIFY YOUR MITIGATION OPTION HERE
     frameEmbeddingMitigation: ["javascript"],
     callbacks: {
         initialized: function (response) {
             // HANDLE INITIALIZATION RESPONSE
+            if(response.status == "ok"){
+               console.log("Payment session initilization sucessed")
+           }else{
+               console.log("Payment session initilization failed with error message: " + response.message)
+           }
         },
         formSessionUpdate: function (response) {
             // HANDLE RESPONSE FOR UPDATE SESSION
