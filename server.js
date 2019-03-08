@@ -1,3 +1,6 @@
+//Env variables
+var dotenv = require('dotenv').config();
+process.env.USERNAME =  dotenv.parsed.USERNAME;
 //Dependencies
 var compression = require('compression');
 var express = require('express');
@@ -8,10 +11,6 @@ var http = require('http');
 var gatewayController = require('./controllers/gateway');
 
 var masterpassController = require('./controllers/masterpass');
-
-// console.log(process.env.TEST_GATEWAY_URL);
-var dotenv = require('dotenv').config();
-process.env.USERNAME =  dotenv.parsed.USERNAME; 
 
 var SecureController = require('./controllers/3DSecure');
 var hostedCheckoutController = require('./controllers/hostedCheckout');
